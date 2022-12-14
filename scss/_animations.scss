@@ -1,0 +1,368 @@
+[data-animation="fade-in"] {
+	-webkit-transition: 1500ms opacity;
+	transition: 1500ms opacity;
+	opacity: 0 !important;
+  }
+  
+  [data-animation="fade-in"].is-visible {
+	opacity: 1 !important;
+  }
+  
+  [data-animation="fade-in-up"] {
+	opacity: 0 !important;
+	-webkit-transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms transform;
+	transition: 1500ms opacity, 1250ms transform, 1250ms -webkit-transform;
+	-webkit-transform: translateY(60px);
+			transform: translateY(60px);
+  }
+  
+  [data-animation="fade-in-up"][data-transition-amount="double"] {
+	-webkit-transform: translateY(120px);
+			transform: translateY(120px);
+  }
+  
+  [data-animation="fade-in-up"][data-transition-amount="half"] {
+	-webkit-transform: translateY(30px);
+			transform: translateY(30px);
+  }
+  
+  [data-animation="fade-in-up"][data-transition-amount="quarter"] {
+	-webkit-transform: translateY(15px);
+			transform: translateY(15px);
+  }
+  
+  [data-animation="fade-in-up"].is-visible {
+	opacity: 1 !important;
+	-webkit-transform: translateY(0);
+			transform: translateY(0);
+  }
+  
+  [data-animation="fade-in-up-before"]:before {
+	opacity: 0 !important;
+	-webkit-transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms transform;
+	transition: 1500ms opacity, 1250ms transform, 1250ms -webkit-transform;
+	-webkit-transform: translateY(60px);
+			transform: translateY(60px);
+  }
+  
+  [data-animation="fade-in-up-before"].is-visible:before {
+	opacity: 1 !important;
+	-webkit-transform: translateY(0);
+			transform: translateY(0);
+  }
+
+  [data-animation="fade-in-down"] {
+	opacity: 0 !important;
+	-webkit-transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms transform;
+	transition: 1500ms opacity, 1250ms transform, 1250ms -webkit-transform;
+	-webkit-transform: translateY(-60px);
+			transform: translateY(-60px);
+  }
+  
+  [data-animation="fade-in-down"][data-transition-amount="double"] {
+	-webkit-transform: translateY(-120px);
+			transform: translateY(-120px);
+  }
+  
+  [data-animation="fade-in-down"][data-transition-amount="half"] {
+	-webkit-transform: translateY(-30px);
+			transform: translateY(-30px);
+  }
+  
+  [data-animation="fade-in-down"][data-transition-amount="quarter"] {
+	-webkit-transform: translateY(-15px);
+			transform: translateY(-15px);
+  }
+  
+  [data-animation="fade-in-down"].is-visible {
+	opacity: 1 !important;
+	-webkit-transform: translateY(0);
+			transform: translateY(0);
+  }
+
+  [data-animation="fade-in-down-before"]:before {
+	opacity: 0 !important;
+	-webkit-transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms transform;
+	transition: 1500ms opacity, 1250ms transform, 1250ms -webkit-transform;
+	-webkit-transform: translateY(-60px);
+			transform: translateY(-60px);
+  }
+  
+  [data-animation="fade-in-down-before"].is-visible:before {
+	opacity: 1 !important;
+	-webkit-transform: translateY(0);
+			transform: translateY(0);
+  }
+
+
+  [data-animation="fade-in-left"] {
+	opacity: 0 !important;
+	-webkit-transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms transform;
+	transition: 1500ms opacity, 1250ms transform, 1250ms -webkit-transform;
+	-webkit-transform: translateX(-60px);
+			transform: translateX(-60px);
+  }
+  
+  [data-animation="fade-in-left"][data-transition-amount="double"] {
+	-webkit-transform: translateX(-120px);
+			transform: translateX(-120px);
+  }
+  
+  [data-animation="fade-in-left"][data-transition-amount="half"] {
+	-webkit-transform: translateX(-30px);
+			transform: translateX(-30px);
+  }
+  
+  [data-animation="fade-in-left"][data-transition-amount="quarter"] {
+	-webkit-transform: translateX(-15px);
+			transform: translateX(-15px);
+  }
+  
+  [data-animation="fade-in-left"].is-visible {
+	opacity: 1 !important;
+	-webkit-transform: translateX(0);
+			transform: translateX(0);
+  }
+
+  [data-animation="fade-in-left-before"]:before {
+	opacity: 0 !important;
+	-webkit-transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms transform;
+	transition: 1500ms opacity, 1250ms transform, 1250ms -webkit-transform;
+	-webkit-transform: translateX(-60px);
+			transform: translateX(-60px);
+  }
+  
+  [data-animation="fade-in-left-before"].is-visible:before {
+	opacity: 1 !important;
+	-webkit-transform: translateX(0);
+			transform: translateX(0);
+  }
+
+  [data-animation="fade-in-right"] {
+	opacity: 0 !important;
+	-webkit-transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms transform;
+	transition: 1500ms opacity, 1250ms transform, 1250ms -webkit-transform;
+	-webkit-transform: translateX(60px);
+			transform: translateX(60px);
+  }
+  
+  [data-animation="fade-in-right"][data-transition-amount="double"] {
+	-webkit-transform: translateX(120px);
+			transform: translateX(120px);
+  }
+  
+  [data-animation="fade-in-right"][data-transition-amount="half"] {
+	-webkit-transform: translateX(30px);
+			transform: translateX(30px);
+  }
+  
+  [data-animation="fade-in-right"][data-transition-amount="quarter"] {
+	-webkit-transform: translateX(15px);
+			transform: translateX(15px);
+  }
+  
+  [data-animation="fade-in-right"].is-visible {
+	opacity: 1 !important;
+	-webkit-transform: translateX(0);
+			transform: translateX(0);
+  }
+
+  [data-animation="fade-in-right-before"]:before {
+	opacity: 0 !important;
+	-webkit-transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms -webkit-transform;
+	transition: 1500ms opacity, 1250ms transform;
+	transition: 1500ms opacity, 1250ms transform, 1250ms -webkit-transform;
+	-webkit-transform: translateX(60px);
+			transform: translateX(60px);
+  }
+  
+  [data-animation="fade-in-right-before"].is-visible:before {
+	opacity: 1 !important;
+	-webkit-transform: translateX(0);
+			transform: translateX(0);
+  }
+  
+  [data-duration="regular"] {
+	-webkit-transition: 1500ms opacity, 1250ms -webkit-transform !important;
+	transition: 1500ms opacity, 1250ms -webkit-transform !important;
+	transition: 1500ms opacity, 1250ms transform !important;
+	transition: 1500ms opacity, 1250ms transform, 1250ms -webkit-transform !important;
+  }
+  
+  [data-duration="slow"] {
+	-webkit-transition: 2000ms opacity, 1750ms -webkit-transform !important;
+	transition: 2000ms opacity, 1750ms -webkit-transform !important;
+	transition: 2000ms opacity, 1750ms transform !important;
+	transition: 2000ms opacity, 1750ms transform, 1750ms -webkit-transform !important;
+  }
+  
+  [data-delay="250"] {
+	-webkit-transition-delay: 250ms !important;
+			transition-delay: 250ms !important;
+  }
+  
+  [data-delay="500"] {
+	-webkit-transition-delay: 500ms !important;
+			transition-delay: 500ms !important;
+  }
+  
+  [data-delay="550"] {
+	-webkit-transition-delay: 550ms !important;
+			transition-delay: 550ms !important;
+  }
+  
+  [data-delay="600"] {
+	-webkit-transition-delay: 600ms !important;
+			transition-delay: 600ms !important;
+  }
+  
+  [data-delay="650"] {
+	-webkit-transition-delay: 650ms !important;
+			transition-delay: 650ms !important;
+  }
+  
+  [data-delay="700"] {
+	-webkit-transition-delay: 700ms !important;
+			transition-delay: 700ms !important;
+  }
+  
+  [data-delay="750"] {
+	-webkit-transition-delay: 750ms !important;
+			transition-delay: 750ms !important;
+  }
+  
+  [data-delay="800"] {
+	-webkit-transition-delay: 800ms !important;
+			transition-delay: 800ms !important;
+  }
+  
+  [data-delay="850"] {
+	-webkit-transition-delay: 850ms !important;
+			transition-delay: 850ms !important;
+  }
+  
+  [data-delay="900"] {
+	-webkit-transition-delay: 900ms !important;
+			transition-delay: 900ms !important;
+  }
+  
+  [data-delay="950"] {
+	-webkit-transition-delay: 950ms !important;
+			transition-delay: 950ms !important;
+  }
+  
+  [data-delay="1000"] {
+	-webkit-transition-delay: 1000ms !important;
+			transition-delay: 1000ms !important;
+  }
+  
+  [data-delay="1250"] {
+	-webkit-transition-delay: 1250ms !important;
+			transition-delay: 1250ms !important;
+  }
+  
+  [data-delay="1500"] {
+	-webkit-transition-delay: 1500ms !important;
+			transition-delay: 1500ms !important;
+  }
+  
+  [data-delay="2000"] {
+	-webkit-transition-delay: 2000ms !important;
+			transition-delay: 2000ms !important;
+  }
+  
+  [data-delay="3000"] {
+	-webkit-transition-delay: 3000ms !important;
+			transition-delay: 3000ms !important;
+  }
+  
+  [data-delay="4000"] {
+	-webkit-transition-delay: 4000ms !important;
+			transition-delay: 4000ms !important;
+  }
+  
+  @media (max-width: 960px) {
+	[data-delay-mobile="0"] {
+	  -webkit-transition-delay: 0ms !important;
+			  transition-delay: 0ms !important;
+	}
+  }
+  
+  @media (max-width: 960px) {
+	[data-delay-mobile="250"] {
+	  -webkit-transition-delay: 250ms !important;
+			  transition-delay: 250ms !important;
+	}
+  }
+  
+  @media (max-width: 960px) {
+	[data-delay-mobile="500"] {
+	  -webkit-transition-delay: 500ms !important;
+			  transition-delay: 500ms !important;
+	}
+  }
+  
+  @media (max-width: 960px) {
+	[data-delay-mobile="750"] {
+	  -webkit-transition-delay: 750ms !important;
+			  transition-delay: 750ms !important;
+	}
+  }
+  
+  @media (max-width: 960px) {
+	[data-delay-mobile="1000"] {
+	  -webkit-transition-delay: 1000ms !important;
+			  transition-delay: 1000ms !important;
+	}
+  }
+  
+  @media (max-width: 960px) {
+	[data-delay-mobile="1250"] {
+	  -webkit-transition-delay: 1250ms !important;
+			  transition-delay: 1250ms !important;
+	}
+  }
+  
+  @media (max-width: 960px) {
+	[data-delay-mobile="1500"] {
+	  -webkit-transition-delay: 1500ms !important;
+			  transition-delay: 1500ms !important;
+	}
+  }
+
+
+
+// .animate-text{
+// 	@keyframes firstLineAnimation {
+// 		0% {opacity: 0; z-index: 0; visibility: hidden;}
+// 		100%   {opacity: 1; visibility: visible;}
+// 	}
+
+// 	&.is-visible{
+// 		-webkit-animation-name: firstLineAnimation;
+// 		animation-name: firstLineAnimation;
+// 		-webkit-animation-duration: 1.25s;
+// 		animation-duration: 1.25s;
+// 		-webkit-animation-delay: 1s;
+// 		animation-delay: 1s;
+// 		-webkit-animation-fill-mode: forwards;
+// 		animation-fill-mode: forwards;
+// 		-webkit-animation-timing-function: ease-in-out;
+// 		animation-timing-function: ease-in-out;
+// 	}
+// }

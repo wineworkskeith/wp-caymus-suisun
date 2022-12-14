@@ -1,0 +1,55 @@
+.content-block__full-width-slider{
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .content-wrapper{
+        padding: 0;
+        font-size: 0;  
+        // max-width: 118.75rem; // 1900px  
+        max-width: 100%;
+    } // content-wrapper
+
+    img{
+        width: 100%;
+    }
+
+    .slick-next,
+    .slick-prev{
+        height: 40px;
+        width: 40px;
+        top: 48%;
+
+        @media #{$small-only}{
+            top: initial;
+            bottom: -45px;
+            width: 20px;
+            height: 20px;
+        }
+        
+        &:before{
+            
+            @media #{$medium-up}{
+                width: 40px;
+                height: 40px;
+                background-image: url('images/icons/icon-slider-arrow.svg');
+
+            }
+        } // before
+    } // next and prev
+
+    .slick-next{
+        
+
+        @media #{$medium-up}{
+            right: 35px;
+        }
+    }
+
+    .slick-prev{
+        @media #{$medium-up}{
+            left: 25px;
+        }
+    }
+
+   
+} // full-width-image

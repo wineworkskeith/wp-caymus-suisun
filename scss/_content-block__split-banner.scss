@@ -1,0 +1,191 @@
+.banner-split{
+    display: flex;
+    flex-wrap: wrap;
+
+    @media #{$medium-up}{
+        flex-wrap: nowrap;
+    }
+
+    &__half{
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: width 0.8s ease-in-out;
+        overflow: hidden;
+        position: relative;
+        padding: 2rem;
+        min-height: 450px;
+        background-color: $black;
+
+        @media #{$medium-up}{
+            width: 50%;
+            height: 100vh;
+            padding: 0;
+        }
+
+        > a{
+            position: absolute;
+            z-index: 3;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        > span,h1{ // screen reader alt
+            overflow: hidden;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            pointer-events: none;
+        } // span
+
+        &-content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 1.75rem;
+            position: relative;
+            opacity: 0;
+
+            &.no-js{
+                opacity: 1;
+            }
+
+            @media #{$medium-up}{
+                min-width: 500px;
+                padding-bottom: 7.5rem;
+            }
+
+
+            span{
+                text-align: center;
+                text-transform: uppercase;
+                color: $white;
+                font-size: 1.375rem;
+                margin-bottom: 0.5rem;
+                font-weight: 400;
+                letter-spacing: 3px;
+                margin-bottom: 1rem;
+                z-index: 3;
+                position: relative;
+
+                @media #{$medium-up}{
+                    font-size: 1.655rem;
+                }
+
+                @media #{$large-up}{
+                    font-size: 1.875rem;
+                }
+
+            } // span
+
+            img{
+                max-width: 70% !important;
+                width: 100%;
+                pointer-events: none;
+                margin-bottom: 1.5rem;
+                position: relative;
+                z-index: 3;
+
+                @media #{$medium-up}{
+                    max-width: 300px !important;
+                }
+            } // img
+
+            div{
+                position: absolute;
+                bottom: 0;
+                left: -1px;
+                right: 0;
+                width: 105%;
+                height: 60%;
+                pointer-events: none;
+                transition: all 0.7s ease-out;
+                opacity: 1;
+                background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.90) 100%);
+            } // veil
+
+            a{
+                opacity: 1;
+                transition: all 1s ease-out;
+                pointer-events: none;
+                position: relative;
+                z-index: 3;
+            } // a
+        } // content
+
+        &:first-of-type{
+            border-bottom: 10px solid $white;
+
+            @media #{$medium-up}{
+                border-bottom: 0;
+                border-right: 3px solid $white;
+            }
+
+            .banner-split__half-content > img{
+
+                @media #{$medium-up}{
+                    max-width: 260px !important;
+                    // margin-bottom: 4.5rem;
+                }
+            }
+        } // first half
+
+        &:last-of-type{
+            background-position: 60% center;
+
+            @media #{$medium-up}{
+                border-left: 3px solid $white;
+            }
+
+            .banner-split__half-content{
+                @media #{$medium-up}{
+                    // padding-bottom: 7.5rem;
+                }
+            }
+
+        } // last half
+
+        &--hidden{
+            @media #{$medium-up}{
+                // width: 0;
+                // border-right: 0 !important;
+                // border-left: 0 !important;
+            }
+        }
+
+        &--active{
+
+            @media #{$medium-up}{
+                // width: 100%;
+                // border-right: 0 !important;
+                // border-left: 0 !important;
+            }
+
+            a{
+                @media #{$medium-up}{
+                    //opacity: 1;
+                    //margin-bottom: 3rem;
+                }
+            }
+        } // active
+
+        &:hover{
+            .button{
+                background: $white;
+                border-color: $white;
+                color: $dark-blue;
+            }
+        }
+    } // half
+
+} // banner-split

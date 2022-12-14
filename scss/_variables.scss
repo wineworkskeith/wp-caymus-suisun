@@ -1,0 +1,133 @@
+
+$body-font-family: "Source Sans Pro", sans-serif;
+$title-font-family: "garamond-premier-pro", serif;
+$script-font-family: $title-font-family;
+$alt-font-family: "ff-meta-web-pro", sans-serif;
+
+
+$template-width: 75rem; // 1200px
+$content-width: $template-width;
+$content-wide-width: 93.75rem; //1500px
+$content-narrow-width: 55rem; //880px
+$content-ultra-narrow-width: 50rem; //800px
+
+$black: #000; 
+$white: #fff; 
+$off-white: #a19d9a;
+$off-white-hover: #ACA870;
+$red: #f32735;
+$light-brown: #eceae6;
+$brown: #3c3430;
+$grey: #50555b;
+$dark-blue: #001e43;
+$green: #727139;
+$light-green: #9BB159;
+$cs-footer-bg: #50555B;
+$cs-footer-text: #CFD1D2;
+$cs-footer-text-hover: #C1D77C;
+
+$body-background-color: $white;
+$body-color: $brown;
+$title-font-color: $brown;
+
+$body-color-suisun: $grey;
+$title-font-color-suisun: $grey;
+
+
+$reverse-background-color: #222;
+$reverse-color: #eee;
+
+$veil-background-color: #222;
+$veil-opacity: 0.4;
+
+$h1-font-size: 2.65rem;
+$h1-font-size-mobile: 1.85rem;
+$h2-font-size: 2.05rem;
+$h2-font-size-mobile: 1.65rem;
+$h3-font-size: 1.4rem;
+$h3-font-size-mobile: 1.35rem;	
+$h4-font-size: 1.6rem;
+$h4-font-size-mobile: 1.2rem;
+$h5-font-size: 1.1rem;
+$h5-font-size-mobile: 1rem;
+$h6-font-size: 0.875rem;
+$h6-font-size-mobile: 0.9rem;
+
+$paragraph-font-size: 1.0313rem;
+$paragraph-font-size-mobile: 1rem;
+$paragraph-line-height: 1.5;
+
+$link-color: #999;
+$link-color-hover: #000;
+
+$navigation-toggle-menu-color: #000;
+
+$footer-background-color: #333;
+$footer-color: #eee;
+$footer-link-color: #eee;
+$footer-link-color-hover: #fff;
+
+//button color
+$buttonColor: #333;
+$buttonBackground: transparent;
+$buttonOutline: #333;
+
+$buttonColorHover: #111;
+$buttonBackgroundHover: transparent;
+$buttonOutlineHover: #111;
+
+$margin-regular-desktop: 1rem;
+$margin-regular-tablet: 1rem;
+$margin-regular-mobile: 1rem;
+
+///////////////////////////////////////////////////
+// Media Queries
+///////////////////////////////////////////////////
+$screen: "only screen";
+
+$small-up: $screen;
+$small-only: "#{$screen} and (max-width: 40em)";
+
+$medium-up: "#{$screen} and (min-width: 40.0625em)";
+$medium-only: "#{$screen} and (min-width: 40.0625em) and (max-width: 64em)";
+
+$large-up: "#{$screen} and (min-width: 64.0625em)";
+$large-only: "#{$screen} and (min-width: 64.0625em) and (max-width: 90em)";
+
+$nav-break-down: "#{$screen} and (max-width: 61.9375em)";
+$nav-break-up: "#{$screen} and (min-width: 62em)";
+
+///////////////////////////////////////////////////
+// Helpers
+///////////////////////////////////////////////////
+.lazy-background{
+	background-image: none !important;
+	background-color: $white;
+}
+
+@mixin clearfix{
+	&:before, &:after{ 
+		content: " "; 
+		display: table; 
+	}
+	
+	&:after{ 
+		clear: both; 
+	}
+}
+
+.clearfix{
+	@include clearfix;
+}
+
+
+.hide-text{
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	
+	a{
+		display: block;
+		height: 100%;
+	}
+}

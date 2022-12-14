@@ -1,0 +1,13 @@
+body.page-template-page-suisun{
+    opacity: 0;
+    transition: all 2s ease-out;
+
+    &.no-js{
+        opacity: 1;
+    }
+
+    &.loaded{
+        opacity: 1;
+    }
+}
+

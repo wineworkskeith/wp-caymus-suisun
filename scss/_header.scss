@@ -1,0 +1,138 @@
+.header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    padding: 12px 0;
+    background: rgba(255,255,255,0.85);
+
+    @media #{$large-up}{
+        position: absolute;
+        padding: 14px 0;
+    }
+
+    body.admin-bar &{
+        @media #{$large-up}{
+            top: 32px;
+        }
+    } // body.admin-bar
+
+    .content-wrapper{
+        max-width: 112.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo{
+        display: block;
+        width: 100%;
+        max-width: 161px;
+        margin-right: 3rem;
+        font-size: 0;
+
+        @media #{$large-up}{
+            margin-right: 4rem;
+        }
+
+        body.suisun-page &{
+            @media #{$large-up}{
+                max-width: 205px;
+            }
+        }
+    } // logo
+
+    &__logos{ // brands bar
+        display: none;
+
+        @media #{$large-up}{
+            display: flex;
+        }
+
+        ul{
+            display: flex;
+            align-items: center;
+
+            li{
+                margin-right: 1.675vw;
+                font-size: 0;
+
+                a{ 
+                    font-size: 0;
+                    transition: all 0.3s ease-out;
+    
+
+                    svg{
+                        max-height: inherit;
+                        width: 100%;
+                        transition: all 0.3s ease-out;
+
+                        *{
+                            transition: all 0.3s ease-out;
+                        }
+                    }
+
+                    &:hover{
+                        svg,svg *{
+                            fill: $black;
+                        }
+                    }
+                }
+
+                &:last-of-type{
+                    margin-right: 0;
+                }
+            } // li
+        } // ul
+    } // logos (brands bar)
+
+    &__icons{ // cart and wine finder
+        display: flex;
+        margin-left: auto;
+
+        @media #{$large-up}{
+            padding-left: 2rem;
+        }
+
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            li{
+                margin-right: 1rem;
+
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    svg{
+                        width: 20px;
+                        height: 20px;
+                        fill: $brown;
+
+                        body.suisun-page &{
+                            fill: $grey;
+
+                            .cart-1{
+                                fill: $grey;
+                            }
+                        }
+                    } // svg
+                } // a
+
+                &:last-of-type{
+                    margin-right: 0;
+                }
+            }
+        }
+
+    } // icons (cart and wine finder)
+
+
+
+
+    
+} // header

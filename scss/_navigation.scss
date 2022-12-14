@@ -1,0 +1,282 @@
+body.show-mobile-nav{
+    @media #{$small-only}{
+        overflow: hidden;
+    }
+}
+
+.menu-toggle{
+    position: fixed;
+    right: 0;
+    top: 8rem;
+    background: $brown;
+    width: 85px;
+    color: $white;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: top 500ms ease-out;
+    z-index: 6;
+    font-family: $alt-font-family;
+    border: 0;
+
+    &:hover{
+        background: $brown;
+        color: $white;
+    }
+
+    &--suisun{
+        background: $dark-blue;
+
+        &:hover{
+            background: $dark-blue;
+        }
+    }
+
+    @media #{$medium-up}{
+        top: 12rem;
+        width: 100px;
+    }
+
+    body.scrolled &{
+        //top: 3rem;
+    }
+
+    &__container{
+        width: 70px;
+        padding: 10px 15px;
+        position: relative;
+        left: -3px;
+
+        &-text{
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        div{
+            position: relative;
+            height: 16px;
+            margin-top: 25px;
+
+            span{
+                width: 100%;
+                height: 2px;
+                background: $white;
+                transition: background 0s 200ms;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                display: block;
+                position: absolute;
+
+                &:before, &:after{
+                    transition-duration: 200ms, 200ms;
+                    transition-delay: 200ms, 0s;
+
+                    background: $white;
+                    content: "";
+                    height: 2px;
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                }
+
+                &:before{
+                    transition-property: top, transform;
+
+                    top: -14px;
+                }
+
+                &:after{
+                    transition-property: bottom, transform;
+
+                    bottom: -14px;
+                }
+            }
+        }
+    } // container
+
+
+
+    span:nth-of-type(2){
+        width: 100%
+    }
+}
+
+.menu-overlay{
+    background-color: rgba(255,255,255,0.85);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -100;
+    transition: all 500ms ease-out;
+    opacity: 1;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100%);
+
+    @media #{$medium-up}{
+        max-width: 380px;
+
+        // body.suisun-page &{
+        //     max-width: 580px;
+        // }
+    }
+
+    &.is-open{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: initial;
+        z-index: 99999999;
+        transform: translateX(0);
+        overflow-y: auto;
+    }
+
+    .modal__content{
+        padding: 2rem 0;
+
+        @media #{$medium-up}{
+            padding: 10vh 3.3rem 0;
+        }
+
+    }
+
+    button{
+        color: $brown;
+        font-size: 45px;
+        display: block;
+        text-align: right;
+        text-decoration: none;
+        width: 50px;
+        margin-left: auto;
+        border: 0;
+        background: transparent;
+
+        body.suisun-page &{
+            color: $grey;
+        }
+
+        &:hover{
+            text-decoration: none;
+            border: 0;
+            background: transparent;
+
+            body.suisun-page &{
+                color: $dark-blue;
+            }
+        }
+
+        @media #{$medium-up}{
+            margin-bottom: 2rem;
+        }
+    } // close
+
+    nav{
+        padding-top: 2rem;
+
+        @media #{$medium-up}{
+            padding-top: 0;
+        }
+
+        ul{
+            margin: 0;
+            margin: 0;
+
+            @media #{$medium-up}{
+                text-align: right;
+                max-width: 580px;
+                margin-left: auto;
+            }
+
+            li{
+                padding: 0.9375rem 0;
+
+                a{
+                    text-transform: uppercase;
+                    color: $brown;
+                    transition: all 0.3s ease-out;
+                    font-size: 1.25rem;
+                    letter-spacing: 0.05em;
+                    text-decoration: none;
+                    font-weight: 600;
+
+                    @media #{$medium-up}{
+                        font-size: 1.985rem;
+                    }
+
+                    span{
+                        font-size: 0.875rem;
+                        display: block;
+                        transition: all 0.3s ease-out;
+
+                        @media #{$medium-up}{
+                            font-size: 1.125rem;
+                        }
+                    }
+
+                    &:hover{
+                        color: $brown;
+                        text-decoration: none;
+
+                        span{
+                            color: $brown;
+                        }
+                    }
+
+                    body.suisun-page &{
+                        color: $grey;
+                    }
+
+                    &:hover{
+                        color: $light-green;
+
+                        body.suisun-page &{
+                            color: $dark-blue;
+                        }
+                    }
+                } // a
+            } // li
+        }
+    } // nav
+
+    &__logo{
+        display: none;
+        margin-top: 0.9375rem;
+        max-width: 240px;
+        width: 100%;
+
+        @media #{$medium-up}{
+            display: none;
+        }
+    } // logo in menu
+
+} // menu overlay
+
+
+.menu-logo{
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+    max-width: 140px;
+
+    svg{
+        width: 100%;
+    }
+
+    @media #{$medium-up}{
+        top: 10vh;
+        left: 3.3rem;
+    }
+
+    &--suisun{
+        max-width: 180px;
+        top: 2rem;
+
+        @media #{$medium-up}{
+            top: 10vh;
+        }
+    }
+} // menu logo

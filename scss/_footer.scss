@@ -1,0 +1,377 @@
+.footer{
+    background: $brown;
+    color: $off-white;
+    letter-spacing: 1px;
+
+    body.suisun-page &{
+        background: $cs-footer-bg;
+        color: $cs-footer-text;
+    }
+
+    .content-wrapper{
+        max-width: 112.5rem;
+        display: flex;
+        flex-wrap: wrap;
+    
+        @media #{$large-up}{
+            justify-content: center;
+            align-items: center;
+            padding-top: 4rem;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    } // content-wrapper
+
+    &__column{
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.5rem 0;
+
+        @media #{$large-up}{
+            width: 33.33%;
+            padding: 2rem 3rem;
+        }
+
+        &:nth-of-type(1){
+            opacity: 0;
+            transform: translate(0px, 90px);
+            position: relative;
+
+            .no-js &{
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+
+            @media #{$large-up}{
+                width: 33.33%;
+            }
+        }
+
+        &:nth-of-type(2){
+            opacity: 0;
+            transform: translate(0px, 90px);
+            position: relative;
+
+            .no-js &{
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+        }
+
+        &:nth-of-type(3){
+            opacity: 0;
+            transform: translate(0px, 90px);
+            position: relative;
+
+            .no-js &{
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+            
+            @media #{$large-up}{
+                width: 33.33%;
+            }
+        }
+
+        &:nth-of-type(2){
+            border-top: 2px solid $off-white;
+            border-bottom: 2px solid $off-white;
+            padding-top: 1.75rem;
+            padding-bottom: 1.75rem;
+
+            @media #{$large-up}{
+                border-left: 2px solid $off-white;
+                border-right: 2px solid $off-white;
+                border-top: 0;
+                border-bottom: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            
+        } // 2nd
+
+        &:last-of-type{
+            width: 100%;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            padding-top: 2rem;
+        }
+
+        &-logo{
+            font-size: 0;
+            margin-bottom: 1.25rem;
+
+            svg{
+                width: 100%;
+                height: 63px;
+                opacity: 1;
+                
+                body.suisun-page &{
+                    height: 34px;
+                    opacity: 0.8;
+                }
+            } // svg
+        } // logo
+
+        &-text{
+            font-size: 0.875rem;
+            text-align: center;
+            font-weight: 600;
+            text-transform: uppercase;
+        } // text
+
+        &-buttons{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1.5rem 0;
+            max-width: 360px;
+
+            @media #{$medium-up}{
+                padding: 2rem 0;
+            }
+
+            a{
+                font-size: 1.0938rem;
+                display: inline-flex;
+                font-weight: 600;
+                border: 1px solid $off-white;
+                background: transparent;
+                color: $off-white;
+                text-transform: uppercase;
+                padding: 8px 14px;
+
+                body.suisun-page &{
+                    color: $cs-footer-text;
+                }
+
+                &:hover{
+                    color: $brown;
+                    background: $off-white;
+
+                    body.suisun-page &{
+                        background: $cs-footer-text;
+                        color: $cs-footer-bg;
+                    }
+                }
+            } // a
+        } // buttons
+
+        &-info{
+            span{
+                text-align: center;
+                display: block;
+                color: $off-white;
+                padding: 0.25rem 0;
+
+                body.suisun-page &{
+                    color: $cs-footer-text;
+                }
+
+                &:first-of-type{
+                    padding-top: 0;
+                }
+
+                &:last-of-type{
+                    padding-bottom: 0;
+                }
+
+                a{
+                    font-size: 0.8125rem;
+                    font-weight: 600;
+                    color: $off-white;
+
+                    body.suisun-page &{
+                        color: $cs-footer-text;
+                    }
+                    
+                    &:hover{
+                        color: $off-white-hover;
+                        text-decoration: none;
+    
+                        body.suisun-page &{
+                            color: $cs-footer-text-hover;
+                        }
+                    } // hover a
+                } // a
+            } // span
+        } // info
+
+        &-social{
+            margin-top: 1.25rem;
+
+            @media #{$medium-up}{
+                margin-top: 1.75rem;
+            }
+
+            ul{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                li{
+                    margin: 0 1rem;
+
+                    @media #{$large-up}{
+                        margin: 0 5px;
+                    }
+
+                    a{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 20px;
+                        height: 20px;
+
+                        img,svg{
+                            width: 100%;
+                            height: auto;
+                            fill: $off-white;
+
+                            body.suisun-page &{
+                                fill: $cs-footer-text;
+                            }
+                        }
+
+                        &:hover{
+                            color: $off-white-hover;
+                            text-decoration: none;
+                            
+        
+                            body.suisun-page &{
+                                color: $cs-footer-text-hover;
+                            }
+
+                            svg,svg *{
+                                fill: $white;
+
+                                body.suisun-page &{
+                                    fill: $cs-footer-text-hover;
+                                }
+                            }
+                        } // hover a
+                    } // a
+                } // li
+            } // ul
+        } // social media
+
+        &-other-logo{
+            font-size: 0;
+            margin-bottom: 2rem;
+
+            a{
+                font-size: 0;
+
+                svg{
+                    height: 35px;
+                    opacity: 0.8;
+
+                    body.suisun-page &{
+                        height: 51px;
+                        opacity: 1;
+                    }
+                }
+            } // a
+
+            &-text{
+                color: $off-white;
+                text-align: center;
+                max-width: 350px;
+                line-height: 1.5;
+                
+                body.suisun-page &{
+                    color: $cs-footer-text;
+                }
+
+                a{
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: $off-white;
+
+                    body.suisun-page &{
+                        color: $cs-footer-text;
+                    }
+
+                    &:hover{
+                        color: $off-white-hover;
+                        text-decoration: none;
+    
+                        body.suisun-page &{
+                            color: $cs-footer-text-hover;
+                        }
+
+                        svg{
+                            fill: $off-white-hover;
+
+                            body.suisun-page &{
+                                fill: $cs-footer-text-hover;
+                            }
+                        }
+                    } // hover a
+                }
+            } // other logo text
+        }  // other logo
+
+        nav.footer-menu{
+            @media #{$small-only}{
+                width: 100%;
+            }
+            ul{
+                @media #{$small-only}{
+                    columns: 2;
+                }
+                li{
+                    text-align: center;
+                    padding: 8px 0;
+
+                    a{
+                        color: $off-white;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        font-size: 0.875rem;
+
+                        body.suisun-page &{
+                            color: $cs-footer-text;
+                        }
+
+                        &:hover{
+                            color: $off-white-hover;
+                            text-decoration: none;
+        
+                            body.suisun-page &{
+                                color: $cs-footer-text-hover;
+                            }
+
+                            svg{
+                                fill: $off-white-hover;
+
+                                body.suisun-page &{
+                                    fill: $cs-footer-text-hover;
+                                }
+                            }
+                        } // hover a
+                    } // a
+                } // li
+            } // ul
+        } // footer menu
+
+        
+    } // column
+
+    #b6f73c8e-ef86-410d-bb09-0afa6dc71c11,
+    .e4845de2-1646-4cf1-9d34-ad5633924992{
+        fill: $white;
+
+        *{
+            fill: $white;
+        }
+    } // suisun logo
+
+    
+
+} // footer 

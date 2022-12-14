@@ -1,0 +1,340 @@
+.content-wrapper{
+	&--width-wide{
+		max-width: $content-wide-width;
+	}
+
+	&--width-narrow{
+		max-width: $content-narrow-width;
+	}
+}
+
+.small-only{
+	@media #{$medium-up}{
+		display: none;
+	}
+}
+
+.medium-up{
+	@media #{$small-only}{
+		display: none;
+	}
+}
+
+.center-on-mobile{
+	@media #{$small-only}{
+		text-align: center !important;
+	}
+}
+
+.beige-background{
+	background: $light-brown;
+}
+
+.gray-background,
+.grey-background{
+	background: #eff1f3;
+}
+
+.no-padding{
+
+	&-bottom{
+		padding-bottom: 0 !important;
+	}
+
+	&-top{
+		padding-top: 0 !important;
+	}
+} // no padding
+
+.explore-suisun{
+	.content-wrapper{
+		.col{
+			&:nth-of-type(1){
+				@media #{$medium-up}{
+					padding-right: 0 !important;
+
+					img{
+						margin-top: 2rem;
+					} // img
+				} // medium up
+			} // first col
+
+			&:nth-of-type(2){
+				@media #{$medium-up}{
+					img{
+						position: relative;
+						top: -2rem;
+						right: -2rem;
+						max-height: 1000px;
+						width: auto !important;
+					} // img
+				} // medium up
+			} // 2nd col
+		} // col
+	} // content-wrapper
+} // explore suisun
+
+.suisun-wines{
+	.content-wrapper{
+		.col{
+			&:nth-of-type(1){
+				@media #{$medium-up}{
+					width: 60%;
+				} // medium up
+
+				@media #{$large-up}{
+					width: 62.5%;
+				} // large up
+			} // first col
+
+			&:nth-of-type(2){
+				@media #{$medium-up}{
+					width: 40%;
+				} // medium up
+
+				@media #{$large-up}{
+					width: 37.5%;
+				} // large up
+			} // 2nd col
+		} // col
+	} // content-wrapper
+} // suisun wines
+
+.suisun-family{
+	.content-wrapper{
+		.col{
+			&:nth-of-type(1){
+				@media #{$medium-up}{
+					width: 44%;
+				} // medium up
+
+				@media #{$large-up}{
+					width: 40%;
+				} // large up
+			} // first col
+
+			&:nth-of-type(2){
+				@media #{$medium-up}{
+					margin-left: auto;
+					width: 56%;
+				} // medium up
+
+				@media #{$large-up}{
+					width: 60%;
+				} // large up
+			} // 2nd col
+		} // col
+	} // content-wrapper
+} // suisun family
+
+.top-spacing{
+	padding-top: 3rem;
+
+	@media #{$medium-up}{
+		padding-top: 4rem;
+	}
+
+	@media #{$large-up}{
+		padding-top: 5rem;
+	}
+}
+
+.visit-reservations, .our-suisun-wines{
+	a.button.button--dark.button--inline-block{
+		margin-top: 1rem;
+	}
+}
+
+.visit-section{
+
+	.col:first-of-type{
+		opacity: 0;
+		transform: translate(-50px, 0px);
+		position: relative;
+
+		.no-js &{
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+
+	.col:last-of-type .col__text{
+		opacity: 0;
+		transform: translate(50px, 0px);
+		position: relative;
+
+		.no-js &{
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+
+	.col:last-of-type img{
+		opacity: 0;
+		transform: translate(0px, 50px);
+		position: relative;
+
+		.no-js &{
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+} // visit-section
+
+.wines-section{
+	.content-block__two-images-and-video-and-text-top-image{
+		img{
+			opacity: 0;
+			transform: translate(50px, 0px);
+			position: relative;
+
+			.no-js &{
+				transform: translate(0px, 0px);
+				opacity: 1;
+			}
+		}
+	}
+
+	.content-block__two-images-and-video-and-text-bottom-image{
+		img{
+			opacity: 0;
+			transform: translate(-50px, 0px);
+			position: relative;
+
+			.no-js &{
+				transform: translate(0px, 0px);
+				opacity: 1;
+			}
+		}
+	}
+
+	.content-block__two-images-and-video-and-text-bottom-text > div{
+		opacity: 0;
+		transform: translate(0px, 50px);
+		position: relative;
+
+		.no-js &{
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+} // wines-section
+
+.before-people-gallery{
+	> div{
+		opacity: 0;
+
+		.no-js &{
+			opacity: 1;
+		}
+	}
+} // before-people-gallery
+
+.visit-reservations{
+	.col:first-of-type{
+		opacity: 0;
+		transform: translate(0px, 50px);
+		position: relative;
+
+		.no-js &{
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+
+	.col:last-of-type img{
+		opacity: 0;
+		transform: translate(50px, 0px);
+		position: relative;
+
+		.no-js &{
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+} // visit reservations
+
+.explore-suisun{
+	.col:first-of-type{
+		div:first-of-type{
+			opacity: 0;
+			transform: translate(-50px, 0px);
+			position: relative;
+
+			.no-js &{
+				transform: translate(0px, 0px);
+				opacity: 1;
+			}
+		}
+
+		div:last-of-type{
+			opacity: 0;
+			transform: translate(0px, 80px);
+			position: relative;
+
+			.no-js &{
+				transform: translate(0px, 0px);
+				opacity: 1;
+			}
+		}
+	}
+
+	.col:last-of-type{
+		img{
+			opacity: 0;
+			position: relative;
+
+			.no-js &{
+				opacity: 1;
+			}
+		}
+	}
+} // explore-suisin
+
+.suisun-wines{
+	.col:first-of-type{
+		opacity: 0;
+		transform: translate(-50px, 0);
+		position: relative;
+
+		.no-js &{
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+
+	.col:last-of-type{
+		opacity: 0;
+		transform: translate(50px, 0);
+		position: relative;
+
+		.no-js &{
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+} // suisun-wines
+
+.suisun-family{
+	.col:first-of-type{
+		opacity: 0;
+		transform: translate(-50px, 0);
+		position: relative;
+
+		.no-js &{
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+
+	.col:last-of-type{
+		opacity: 0;
+		transform: translate(50px, 0);
+		position: relative;
+
+		.no-js &{
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+} // suisun-family
